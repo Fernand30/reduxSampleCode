@@ -8,7 +8,9 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  increment: () => { dispatch({ type: 'INCREMENT' }) },
+  increment: (num) => { 
+    dispatch({ num: num, type: 'INCREMENT' }) 
+  },
   decrement: () => { dispatch({ type: 'DECREMENT' }) },
   reset: () => { dispatch({ type: 'RESET' }) },
   add: () => { dispatch({ type: 'ADD' }) },
